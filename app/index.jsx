@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { Image, ScrollView, Text, View } from 'react-native';
-import { Ridirect, router } from 'expo-router';
+import { Redirect, router } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { images } from '../constants'
@@ -9,9 +9,9 @@ import CustomButton from '../components/CustomButton';
 export default function App() {
   return ( 
     ///Doesn't overlap any bars from devices 
-    <SafeAreaView className='bg-purple-400 h-full'>
+    <SafeAreaView className='bg-purple-400 flex-1'>
       <ScrollView contentContainerStyle={{height: '100%'}}>
-        <View className='w-full justify-center items-center min-h-[85wh] px-4'> 
+        <View className='w-full justify-center items-center min-h-[85vh] px-4'> 
           <Image 
             source={images.logo}
             className='w-[130px] h-[84px]'
@@ -31,7 +31,7 @@ export default function App() {
             </Text>
             <Image 
               source={images.path}
-              className='w-[136px] h-[15] absolute -bottom-2 -right-8'
+              className='w-[136px] h-[15px] absolute -bottom-2 -right-8'
               resizeMode='contain'
             />
           </View>
